@@ -1,6 +1,5 @@
-===============
-Helper Functions for RxPHP
-===============
+# Helper Functions for RxPHP
+
 
 ```PHP
 Observable::of(Observable::fromArray([1, 2, 3, 4, 5]))
