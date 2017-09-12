@@ -1,0 +1,38 @@
+{
+  "name": "rx/helpers",
+  "type": "library",
+  "description": "A collection of functions to use with RxPHP",
+  "keywords": [
+    "rx",
+    "rx.php",
+    "rxphp",
+    "react",
+    "reactive"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matt Bonneau",
+      "email": "matt@bonneau.net",
+      "role": "Developer"
+    },
+    {
+      "name": "David Dan",
+      "email": "davidwdan@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Rx\\Websocket\\": "src/"
+    }
+  },
+  "require": {
+    "reactivex/rxphp": "^2.0"
+  },
+  "autoload": {
+    "files": [
+      "src/functions.php"
+    ]
+  }
+}
