@@ -96,10 +96,8 @@ function echoObserver($prefix = '')
 
 function echoFinally($prefix = ''): callable
 {
-    return function (Observable $observable) use ($prefix): Observable {
-        return $observable->finally(function () use ($prefix) {
-            echo $prefix . 'Finally! ' . PHP_EOL;
-        });
+    return function () use ($prefix) {
+        echo $prefix . 'Finally! ' . PHP_EOL;
     };
 }
 
