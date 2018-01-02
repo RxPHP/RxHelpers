@@ -22,11 +22,6 @@
       "role": "Developer"
     }
   ],
-  "autoload": {
-    "psr-4": {
-      "Rx\\Websocket\\": "src/"
-    }
-  },
   "require": {
     "reactivex/rxphp": "^2.0"
   },
