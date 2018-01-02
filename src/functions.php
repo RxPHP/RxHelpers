@@ -103,11 +103,11 @@ function echoFinally($prefix = ''): callable
 
 function asString($value): string
 {
-    if (is_array($value)) {
+    if (\is_array($value)) {
         return json_encode($value);
     }
 
-    if (is_bool($value)) {
+    if (\is_bool($value)) {
         return (string)(integer)$value;
     }
 
@@ -118,13 +118,14 @@ function asString($value): string
  * Partial Apply
  *
  * @param callable $func
- * @param $lastValue
+ * @param $args []
+ *
  * @return callable
  *
  */
-function p(callable $func, $lastValue): callable
+function p(callable $func, ...$args): callable
 {
-    return function ($value) use ($func, $lastValue) {
-        return $func($value, $lastValue);
+    return function ($value) use ($func, $args) {
+        return \call_user_func_array($func, \array_merge([$value], $args));
     };
 }
